@@ -325,7 +325,13 @@ class _CalculatorPageState extends State<CalculatorPage> {
   Widget _inputs()=>ListView(padding:const EdgeInsets.all(16),children:[
     const Text('پارامترهای محاسبه',style:TextStyle(fontSize:20,fontWeight:FontWeight.bold)),const SizedBox(height:6),const Text('واحد شتاب Ss و S1 برابر g است. انتخاب رابطه زمان تناوب از فهرست اکسل ساده‌سازی شده است؛ سیستم واقعی مقاوم جانبی را جداگانه از جدول ۱-۳ انتخاب کنید. با انتخاب آن، Ru به مقدار جدول به‌روزرسانی می‌شود. کنترل کامل یادداشت‌ها و استثناهای آیین‌نامه همچنان لازم است.'),const SizedBox(height:16),
     Form(key:_form,child:Column(children:[input('h','ارتفاع سازه H','m'),const SizedBox(height:10),input('ie','ضریب اهمیت Ie',''),const SizedBox(height:10),
-      DropdownButtonFormField<int>(value:system,decoration:const InputDecoration(labelText:'گزینه ساده‌شده برای رابطه زمان تناوب (طبق اکسل)',border:OutlineInputBorder()),items:const [
+DropdownButtonFormField<int>(
+  value: system,
+  isExpanded: true,
+  decoration: const InputDecoration(
+    labelText: 'گزینه ساده‌شده برای رابطه زمان تناوب (طبق اکسل)',
+    border: OutlineInputBorder(),
+  ),items:const [
         DropdownMenuItem(value:1,child:Text('۱ ـ قاب خمشی فولادی/مختلط بدون میانقاب')),
         DropdownMenuItem(value:2,child:Text('۲ ـ قاب خمشی بتنی بدون میانقاب')),
         DropdownMenuItem(value:3,child:Text('۳ ـ سایر سیستم‌ها؛ رابطه تجربی ۰٫۰۴۹H^۰٫۷۵')),
