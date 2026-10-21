@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:seismo2800_v5/main.dart';
+import 'package:standard_2800_v5/main.dart';
 
 void main() {
   test('matches key workbook relations for the default example', () {
